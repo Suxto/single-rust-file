@@ -65,6 +65,14 @@ function activate(context) {
 			let scriptName = 'run_' + currentFileName[0];
 			let scriptAction = "cargo run --bin " + currentFileName[0];
 
+			if (!cargoTomlObject.package.hasOwnProperty('metadata')) {
+				cargoTomlObject.package['metadata'] = {};
+			}
+
+			if (!cargoTomlObject.package['metadata'].hasOwnProperty('scripts')) {
+				cargoTomlObject.package['metadata'].scripts = {};
+			}
+
 			cargoTomlObject.package['metadata']['scripts'][scriptName] = scriptAction;
 
 			console.log(cargoTomlObject);
