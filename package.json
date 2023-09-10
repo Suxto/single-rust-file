@@ -1,0 +1,55 @@
+{
+  "name": "single-rust-file",
+  "displayName": "single_rust_file",
+  "description": "Add .rs file as a standalone executable file",
+  "version": "0.0.1",
+  "keywords": [
+    "rust",
+    "tool"
+  ],
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/Cargo.toml"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "single-rust-file.addToTOML",
+        "title": "Add as a standalone file"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "single-rust-file.addToTOML",
+          "group": "1_modification",
+          "when": "resourceLangId == rust"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "@iarna/toml": "^2.2.5"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.82.0",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6"
+  }
+}
