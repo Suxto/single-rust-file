@@ -3,9 +3,9 @@
   "displayName": "single_rust_file",
   "description": "Add .rs file as a standalone executable file",
   "repository": "https://github.com/Suxto/single-rust-file",
-  "version": "0.0.5",
+  "version": "0.0.4",
   "publisher": "Suxton",
-  "icon": ".vscode/icon.png",
+  "icon": "images/icon.png",
   "keywords": [
     "rust",
     "tool"
