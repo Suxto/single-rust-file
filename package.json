@@ -3,7 +3,7 @@
   "displayName": "single_rust_file",
   "description": "Add .rs file as a standalone executable file",
   "repository": "https://github.com/Suxto/single-rust-file",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "Suxton",
   "icon": "images/icon.png",
   "keywords": [
